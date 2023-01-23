@@ -17,16 +17,18 @@ public class TC04_LibraryVerification {
 
         //2. Go to http://library2.cybertekschool.com/login.html
         driver.get("https://library2.cybertekschool.com/login.html");
+
         //3. Enter username: “incorrect@email.com”
-        driver.findElement(By.className("form-control")).sendKeys("incorrect@email.com");
-        //4. Enter password: “incorrect password”
-        driver.findElement(By.id("inputPassword")).sendKeys("incorrect password");
-        //5. Verify: visually “Sorry, Wrong Email or Password”
-        //displayed
-        driver.findElement(By.tagName("button")).click();
         //PS: Locate username input box using “className” locator
+        driver.findElement(By.className("form-control")).sendKeys("incorrect@email.com");
+
+        //4. Enter password: “incorrect password”
         //Locate password input box using “id” locator
+        driver.findElement(By.id("inputPassword")).sendKeys("incorrect password");
+
+        //5. Verify: visually “Sorry, Wrong Email or Password displayed
         //Locate Sign in button using “tagName” locator
+        driver.findElement(By.tagName("button")).click();
 
 
 
