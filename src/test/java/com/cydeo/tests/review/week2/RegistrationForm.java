@@ -29,7 +29,7 @@ public class RegistrationForm {
         driver.get("https://practice.cydeo.com/registration_form");
     }
 
-     @Test
+     @Test(priority = 1)
      public void registration_form_page_test(){
 
          String expectedTitle="Registration Form";
