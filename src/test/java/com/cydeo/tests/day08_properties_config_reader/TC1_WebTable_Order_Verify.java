@@ -1,4 +1,4 @@
-package com.cydeo.tests.properties_config_reader;
+package com.cydeo.tests.day08_properties_config_reader;
 
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.WebDriverFactory;
