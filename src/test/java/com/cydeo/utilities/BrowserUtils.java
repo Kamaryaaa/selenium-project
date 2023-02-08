@@ -1,8 +1,12 @@
 package com.cydeo.utilities;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.time.Duration;
 import java.util.Set;
 
 /*
@@ -47,6 +51,16 @@ public class BrowserUtils {
     }
     public static void verifyTitleContains(WebDriver driver, String expectedInTitle){
         Assert.assertTrue(driver.getTitle().contains(expectedInTitle));
+    }
+
+    public static void waitForInvisibilityOf(WebElement target){
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.invisibilityOf(target));
+    }
+
+    public static void waitForTitleContains(String title){
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.titleContains(title));
     }
 
 
