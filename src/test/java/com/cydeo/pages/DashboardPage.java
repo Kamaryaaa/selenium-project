@@ -16,6 +16,8 @@ public class DashboardPage {
     public List<WebElement> mainMenu;
 
 
+    @FindBy(xpath = "//span[.='Vehicles']")
+    public WebElement vehicles;
 
 
 
