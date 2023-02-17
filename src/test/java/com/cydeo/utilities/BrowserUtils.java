@@ -7,6 +7,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 /*
@@ -61,6 +63,21 @@ public class BrowserUtils {
     public static void waitForTitleContains(String title){
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.titleContains(title));
+    }
+
+    public static List<String> getTexts(List<WebElement> elements) {
+
+        List<String> result=new ArrayList<>();
+
+        for (WebElement element : elements) {
+
+            String eachText = element.getText();
+            result.add(eachText);
+
+        }
+
+        return result;
+
     }
 
 
